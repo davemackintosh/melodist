@@ -5,6 +5,16 @@ const {
 const { resolve } = require("path")
 const src = resolve(__dirname, "../", "src")
 
+console.log({
+  "@translations": resolve(process.cwd() + "/src/translations"),
+  "@flow": resolve(process.cwd() + "/flow/declarations"),
+
+  "@src": resolve(process.cwd() + "/src/"),
+  "@constants": resolve(process.cwd() + "/src/constants"),
+  "@components": resolve(process.cwd() + "/src/shared/components"),
+  "@lib": resolve(process.cwd() + "/src/shared/lib"),
+})
+
 const webpackConfig = {
   context: src,
   target: "electron-renderer",
@@ -20,13 +30,13 @@ const webpackConfig = {
   mode: process.env.NODE_ENV || "development",
   resolve: {
     alias: {
-      "@translations": resolve(process.cwd() + "/translations"),
+      "@translations": resolve(process.cwd() + "/src/translations"),
       "@flow": resolve(process.cwd() + "/flow/declarations"),
     
-      "@src": resolve(process.cwd() + "/../src/"),
-      "@constants": resolve(process.cwd() + "/../src/constants"),
-      "@components": resolve(process.cwd() + "/../src/shared/components"),
-      "@lib": resolve(process.cwd() + "/../src/shared/lib"),
+      "@src": resolve(process.cwd() + "/src/"),
+      "@constants": resolve(process.cwd() + "/src/constants"),
+      "@components": resolve(process.cwd() + "/src/shared/components"),
+      "@lib": resolve(process.cwd() + "/src/shared/lib"),
     },    
     modules: [resolve(__dirname, "../", "src"), "node_modules"],
   },
