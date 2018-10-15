@@ -1,23 +1,20 @@
 // @flow
 
 import React, { Fragment } from "react"
-import { Link } from "react-router-dom"
+
+import type { Node } from "react"
 
 type Props = {
-  name: string
+  name: string,
+  children: ?Node[],
 }
 
 function MelodistApp(props: Props) {
   return (
     <Fragment>
-      <Link to="/welcome">Welcome</Link>
       { props.children }
     </Fragment>
   )
-}
-
-MelodistApp.defaultProps = {
-  name: "Dave",
 }
 
 export default MelodistApp

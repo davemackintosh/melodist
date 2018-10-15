@@ -1,0 +1,179 @@
+{
+  "title": "Basic GP5 file",
+  "album": "Melodist Album",
+  "description": "",
+  "track_number": 1,
+  "artist": "Melodist Artist",
+  "authors": [ "Dave Mackintosh" ],
+  "tempo": 120,
+  "time_signature": {
+    "numerator": 4,
+    "denominator": 4
+  },
+  "tracks": [
+    {
+      "title": "Guitar",
+      "instrument": {
+        "type": "acoustic_guitar_steel"
+      },
+      "tuning": 440,
+      "measures": [
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 0,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        },
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 1,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        },
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 2,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        },
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 3,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        },
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 4,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        },
+        {
+          "repeat": 1,
+          "beats": [
+            {
+              "duration": 1,
+              "notes": [
+                {
+                  "string": 5,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            }
+          ],
+          "time_signature": {
+            "numerator": 4,
+            "denominator": 4
+          },
+          "text": ""
+        }
+      ],
+      "mute": false,
+      "strings": 6,
+      "colour": "#F00",
+      "volume": 1,
+      "pan": 0
+    }
+  ]
+}
