@@ -19,9 +19,9 @@ export const defaultState: Meldist$GlobalState = Object.assign({}, {
 
 export default (state: Meldist$GlobalState = defaultState, action: AppAction = {}) => {
   switch (action.type) {
+  
   case OPEN_PIECE:
   case CLOSE_PIECE:
-  case PIECE_READY:
   default:
     return { ...state }
   }

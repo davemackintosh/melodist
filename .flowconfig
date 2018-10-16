@@ -1,13 +1,6 @@
 [ignore]
-.*/api/node_modules/.*
-.*/dist-server/.*
-./bin
-./scripts
-./customer-ui/.*
 
 [include]
-./shared-lib
-./admin-ui
 
 [libs]
 ./flow/declarations/
@@ -29,7 +22,7 @@ module.name_mapper='^\@flow\/\(.*\)$' -> '<PROJECT_ROOT>/flow/declarations/\1'
 module.name_mapper='^\@shared\/\(.*\)$' -> '<PROJECT_ROOT>/src/shared/\1'
 module.name_mapper='^\@translations\/\(.*\)$' -> '<PROJECT_ROOT>/src/translations/\1'
 module.name_mapper='^\@src\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
-module.name_mapper='^\@constants\/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
+module.name_mapper='^\@constants\/\(.*\)$' -> '<PROJECT_ROOT>/src/shared/constants/\1'
 module.name_mapper='^\@components\/\(.*\)$' -> '<PROJECT_ROOT>/src/shared/components/\1'
 module.name_mapper='^\@lib\/\(.*\)$' -> '<PROJECT_ROOT>/src/shared/lib/\1'
 module.name_mapper='^\@reducers\/\(.*\)$' -> '<PROJECT_ROOT>/src/shared/reducers/\1'
