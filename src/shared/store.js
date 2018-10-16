@@ -5,20 +5,23 @@ import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly"
 import reducer from "./reducers"
 
+import app from "@middleware/app"
+
 const getMiddleware = () => {
-  if (process.env.NODE_ENV === "production")
+  if (process.env.NODE_ENV === "production") // No logger for production
     return applyMiddleware(
       thunk,
-      
+      app,
     )
-  else if (typeof window === "undefined")
+  else if (typeof window === "undefined") // No logger for SSR.
     return applyMiddleware(
       thunk,
-      
+      app,
     )
   else
     return applyMiddleware(
       thunk,
+      app,
       
       createLogger(),
     )

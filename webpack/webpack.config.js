@@ -4,17 +4,18 @@ const {
 
 const { resolve } = require("path")
 const src = resolve(__dirname, "../", "src")
+const cwd = process.cwd()
 
 const alias = {
-  "@translations": resolve(process.cwd() + "/src/translations"),
-  "@flow": resolve(process.cwd() + "/flow/declarations"),
+  "@translations": resolve(src + "/translations"),
+  "@flow": resolve(cwd + "/flow/declarations"),
 
-  "@src": resolve(process.cwd() + "/src/"),
-  "@constants": resolve(process.cwd() + "/src/constants"),
-  "@components": resolve(process.cwd() + "/src/shared/components"),
-  "@lib": resolve(process.cwd() + "/src/shared/lib"),
-  "@reducers": resolve(process.cwd() + "/src/shared/reducers"),
-  "@middleware": resolve(process.cwd() + "/src/shared/middleware"),
+  "@src": resolve(src + "/"),
+  "@constants": resolve(src + "/shared/constants"),
+  "@components": resolve(src + "/shared/components"),
+  "@lib": resolve(src + "/shared/lib"),
+  "@reducers": resolve(src + "/shared/reducers"),
+  "@middleware": resolve(src + "/shared/middleware"),
 }
 
 console.log(alias) // eslint-disable-line
