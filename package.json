@@ -4,9 +4,8 @@
   "description": "",
   "main": "electron/electron.js",
   "scripts": {
-    "dev": "concurrently --kill-others 'yarn run wds' 'yarn run electron'",
+    "dev": "concurrently --kill-others 'yarn run wds'",
     "wds": "webpack-dev-server --content-base ./electron/ --hot --inline --config ./webpack/webpack.config.js",
-    "electron": "NO_WEBPACK_WATCH=true yarn run webpack && electron ./",
     "run": "concurrently --kill-others 'yarn run webpack --watch' 'yarn run electron'",
     "webpack": "webpack --config ./webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,14 +25,13 @@
     "classnames": "^2.2.6",
     "concurrently": "^4.0.1",
     "css-loader": "^1.0.0",
-    "electron": "^3.0.4",
-    "electron-devtools-installer": "^2.2.4",
     "eslint": "^5.6.1",
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "flow-bin": "^0.83.0",
-    "node-sass": "^4.9.3",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -46,13 +44,11 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-target-electron-renderer": "^0.4.0",
     "window-or-global": "^1.0.1"
   }
 }

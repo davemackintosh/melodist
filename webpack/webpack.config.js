@@ -16,6 +16,7 @@ const alias = {
   "@lib": resolve(src + "/shared/lib"),
   "@reducers": resolve(src + "/shared/reducers"),
   "@middleware": resolve(src + "/shared/middleware"),
+  "@less": resolve(src + "/shared/less"),
 }
 
 console.log(alias) // eslint-disable-line
@@ -45,11 +46,16 @@ const webpackConfig = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css|less)$/,
         use: [
           "style-loader",
           "css-loader",
-          "sass-loader",
+          {
+            loader: "less-loader",
+            options: {
+              noIeCompat: true,
+            }
+          },
         ],
       },
       {
