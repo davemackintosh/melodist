@@ -23,7 +23,7 @@ console.log(alias) // eslint-disable-line
 
 const webpackConfig = {
   context: src,
-  target: "electron-renderer",
+  // target: "electron-renderer",
   entry: [
     resolve(src, "index.js"),
   ],

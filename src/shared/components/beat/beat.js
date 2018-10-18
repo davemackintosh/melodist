@@ -2,13 +2,19 @@
 
 import React from "react"
 
+import type { NoteType } from "@flow/note.flow"
 import type { Props } from "./beat.flow"
 
-function Beat(props: Props) {
-  return (
-    <text>
+import Note from "@components/note/note"
 
-    </text>
+function Beat(props: Props) {
+  const noteElements = props.beat.notes.map((note: NoteType, index: number) =>
+    <Note key={index} note={note} />
+  )
+  return (
+    <div className="beat">
+      { noteElements }
+    </div>
   )
 }
 

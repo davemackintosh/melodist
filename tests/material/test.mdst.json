@@ -2,11 +2,11 @@
   "title": "Basic GP5 file",
   "album": "Melodist Album",
   "description": "",
-  "track_number": 1,
+  "trackNumber": 1,
   "artist": "Melodist Artist",
   "authors": [ "Dave Mackintosh" ],
   "tempo": 120,
-  "time_signature": {
+  "timeSignature": {
     "numerator": 4,
     "denominator": 4
   },
@@ -37,7 +37,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },
@@ -62,7 +62,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },
@@ -87,7 +87,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },
@@ -112,7 +112,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },
@@ -137,7 +137,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },
@@ -162,7 +162,7 @@
               "dotted": false
             }
           ],
-          "time_signature": {
+          "timeSignature": {
             "numerator": 4,
             "denominator": 4
           },

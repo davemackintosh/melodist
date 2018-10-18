@@ -7,7 +7,10 @@ import type { TrackType } from "@flow/track.flow"
 import type { MeasureType } from "@flow/measure.flow"
 import type { NoteType } from "@flow/note.flow"
 
+import PieceHeader from "@components/piece-header/piece-header"
 import Measure from "@components/measure/measure"
+
+import testMDST from "../../../../tests/material/test.mdst.json"
 
 type Props = {
   piece: PieceType,
@@ -20,6 +23,10 @@ type State = {
 }
 
 class Piece extends Component <Props, State> {
+  static defaultProps = {
+    piece: testMDST,
+  }
+
   state = {
     selectedTrack: this.props.piece.tracks[0],
     selectedMeasure: this.props.piece.tracks[0].measures[0],
@@ -34,9 +41,16 @@ class Piece extends Component <Props, State> {
 
   render() {
     return (
-      <svg width="100%">
-        { this.renderMeasures(this.state.selectedTrack.measures) }
-      </svg>
+      <div className="piece">
+        <PieceHeader piece={this.props.piece} />
+        <div className="piece--measures">
+          { this.renderMeasures(this.state.selectedTrack.measures) }
+        </div>
+
+        <div className="piece--footer">
+
+        </div>
+      </div>
     )
   }
 }
