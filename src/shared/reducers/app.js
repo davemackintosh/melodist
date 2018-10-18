@@ -10,14 +10,14 @@ import {
 import testMDST from "../../../tests/material/test.mdst.json"
 
 import type { AppAction } from "@flow/actions/app-actions.flow"
-import type { Meldist$GlobalState } from "@flow/melodist.flow"
+import type { Melodist$GlobalState } from "@flow/melodist.flow"
 
-export const defaultState: Meldist$GlobalState = Object.assign({}, {
+export const defaultState: Melodist$GlobalState = Object.assign({}, {
   openMenu: null,
   piece: testMDST,
 }, root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.app : {})
 
-export default (state: Meldist$GlobalState = defaultState, action: AppAction = {}) => {
+export default (state: Melodist$GlobalState = defaultState, action: AppAction = {}) => {
   switch (action.type) {
   
   case OPEN_PIECE:
