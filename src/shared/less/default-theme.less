@@ -1,3 +1,12 @@
+@import "./reset.less";
+@import "./fonts.less";
+@import "./vars.less";
+
+// Import the mobile stylesheet for mobile.
+@import url("./default-mobile.less") only screen and (max-width: 700px);
+
+// Import the desktop stylesheet for desktop/tablets.
+@import url("./default-desktop.less") only screen and (min-width: 700px);
 
 html, body {
   width: 100%;
@@ -10,17 +19,59 @@ html, body {
 }
 
 #melodist-container {
-
   .piece {
     width: 100%;
     height: 100%;
 
     &--measures {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
 
       .measure {
-      
+        position: relative;
+        min-height: 7em; // @TODO REmove this nonsense.
+        margin: 1em 0;
+        padding: 0;
+
+        background-image: repeating-linear-gradient(
+          0deg,
+          @measureStringLineColour,
+          @measureStringLineColour 1px,
+          #fff 1px,
+          #fff 20px
+        );
+
+        .time-signature {
+          position: absolute;
+          display: none;
+
+          span {
+            display: block;
+          }
+        }
+
+        .beat {
+          display: inline-block;
+          height: 100%;
+          position: relative;
+
+          .note {
+            position: absolute;
+            display: inline-block;
+            padding: 0;
+
+            @iterations: 10;
+            .string-loop (@i) when (@i > 0) {
+              &--string__@{i} {
+                @top: @iterations - @i;
+                top: ~"@{top}em";
+              }
+
+              .string-loop(@i - 1);
+            }
+
+            .string-loop (@iterations);
+          }
+        }
       }
     }
   }

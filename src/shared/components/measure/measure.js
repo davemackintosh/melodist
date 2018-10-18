@@ -21,22 +21,16 @@ type State = {
 
 class Measure extends Component <Props, State> {
 
-  renderBeat(beat: BeatType) {
+  renderBeat(beat: BeatType, index: number) {
     return (
-      <Beat beat={beat} />
+      <Beat beat={ beat } key={ index } />
     )
   }
 
-  renderMeasureSVG() {
-
-  }
-
   render() {
-    console.log(this.props.measure)
-
     return (
       <div className="measure">
-        <TimeSignature timeSignature={this.props.measure.timeSignature } />
+        <TimeSignature timeSignature={ this.props.measure.timeSignature } />
         { this.props.measure.beats.map(this.renderBeat, this) }
       </div>
     )

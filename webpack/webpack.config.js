@@ -59,7 +59,7 @@ const webpackConfig = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        test: /\.(jpg|jpeg|png|gif|mp3|svg|woff|otf)$/,
         loaders: ["file-loader"],
       },
     ],

@@ -11,8 +11,8 @@ type Props = {
 class PieceHeader extends Component<Props> {
   renderAuthors(authors: string[] = []) {
     return authors.map((author: string) => (
-      <span className="piece--header--author">
-        {author}
+      <span className="piece--header--author" key={ author }>
+        { author }
       </span>
     ))
   }

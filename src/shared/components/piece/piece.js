@@ -34,15 +34,15 @@ class Piece extends Component <Props, State> {
   }
 
   renderMeasures(measures: MeasureType[] = []) {
-    return measures.map((measure: MeasureType) => 
-      <Measure measure={ measure } />
+    return measures.map((measure: MeasureType, index: number) => 
+      <Measure measure={ measure } key={ index } />
     )
   }
 
   render() {
     return (
-      <div className="piece">
-        <PieceHeader piece={this.props.piece} />
+      <div className="piece">1
+        <PieceHeader piece={ this.props.piece } />
         <div className="piece--measures">
           { this.renderMeasures(this.state.selectedTrack.measures) }
         </div>

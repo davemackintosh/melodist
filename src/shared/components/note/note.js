@@ -8,13 +8,13 @@ import type { Props } from "./note.flow"
 function Note(props: Props) {
   const classNames = classes({
     note: true,
-    [`note--string-${props.note.string}`]: true,
+    [`note--string__${props.note.string}`]: true,
   })
 
   return (
-    <text className={ classNames }>
+    <span className={ classNames }>
       { props.note.fret }
-    </text>
+    </span>
   )
 }
 
