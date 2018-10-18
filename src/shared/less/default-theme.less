@@ -28,8 +28,8 @@ html, body {
 
       .measure {
         position: relative;
-        min-height: 7em; // @TODO REmove this nonsense.
-        margin: 1em 0;
+        height: 7rem; // @TODO REmove this nonsense.
+        margin: 1rem 0;
         padding: 0;
 
         background-image: repeating-linear-gradient(
@@ -50,20 +50,18 @@ html, body {
         }
 
         .beat {
-          display: inline-block;
           height: 100%;
           position: relative;
 
           .note {
             position: absolute;
-            display: inline-block;
             padding: 0;
 
             @iterations: 10; // I'll move this to vars. Only djenters need more than 10 strings
-            .string-loop (@i) when (@i > 0) {
+            .string-loop (@i) when (@i >= 0) {
               &--string__@{i} {
-                @top: @iterations - @i;
-                top: ~"@{top}em";
+                @top: @i * @measureStringHeight - 0.7; 
+                bottom: ~"@{top}";
               }
 
               .string-loop(@i - 1);
