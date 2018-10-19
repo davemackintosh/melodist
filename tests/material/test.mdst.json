@@ -16,7 +16,7 @@
       "instrument": {
         "type": "acoustic_guitar_steel"
       },
-      "tuning": 440,
+      "tuning": "standard", 
       "measures": [
         {
           "repeat": 1,
@@ -27,6 +27,82 @@
                 {
                   "string": 0,
                   "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                },
+                {
+                  "string": 1,
+                  "fret": 2,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                },
+                {
+                  "string": 2,
+                  "fret": 2,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            },
+            {
+              "duration": 0.25,
+              "notes": [
+                {
+                  "string": 0,
+                  "fret": 0,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            },
+            {
+              "duration": 0.25,
+              "notes": [
+                {
+                  "string": 1,
+                  "fret": 2,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            },
+            {
+              "duration": 0.25,
+              "notes": [
+                {
+                  "string": 1,
+                  "fret": 2,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                }
+              ],
+              "triplet": false,
+              "dotted": false
+            },
+            {
+              "duration": 0.25,
+              "notes": [
+                {
+                  "string": 2,
+                  "fret": 2,
                   "ring": false,
                   "linked": null,
                   "dynamic": 7,
@@ -77,6 +153,22 @@
                 {
                   "string": 2,
                   "fret": 2,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                },
+                {
+                  "string": 3,
+                  "fret": 4,
+                  "ring": false,
+                  "linked": null,
+                  "dynamic": 7,
+                  "effects": []
+                },
+                {
+                  "string": 4,
+                  "fret": 4,
                   "ring": false,
                   "linked": null,
                   "dynamic": 7,
