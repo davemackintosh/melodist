@@ -6,6 +6,7 @@ import type { MeasureType } from "@flow/measure.flow"
 import type { NoteType } from "@flow/note.flow"
 import type { BeatType } from "@flow/beat.flow"
 
+import MeasureEnd from "@components/measure/measure-end"
 import Beat from "@components/beat/beat"
 import TimeSignature from "@components/time-signature/time-signature"
 
@@ -32,6 +33,7 @@ class Measure extends Component <Props, State> {
       <div className="measure">
         <TimeSignature timeSignature={ this.props.measure.timeSignature } />
         { this.props.measure.beats.map(this.renderBeat, this) }
+        <MeasureEnd measure={ this.props.measure } />
       </div>
     )
   }
