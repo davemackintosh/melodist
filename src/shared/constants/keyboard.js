@@ -1,17 +1,22 @@
 // Arrows
-export const KB_UP = "[keyboard]UP"
-export const KB_DOWN = "[keyboard]DOWN"
-export const KB_LEFT = "[keyboard]LEFT"
-export const KB_RIGHT = "[keyboard]RIGHT"
+export const KB_UP = 38
+export const KB_DOWN = 40
+export const KB_LEFT = 37
+export const KB_RIGHT = 39
 
 // Special keys
-export const DEL = "[keyboard]DEL"
-export const BACKSPACE = "[keyboard]BACKSPACE"
-export const SHIFT = "[keyboard]SHIFT"
-export const CTRL = "[keyboard]CTRL"
+export const KB_DEL = 46
+export const KB_BACKSPACE = 8
+export const KB_SHIFT = 16
+export const KB_CTRL = 17
 
 // Keyboard combos
-export const SHIFT_UP = "[keyboard]SHIFT+UP"
-export const SHIFT_DOWN = "[keyboard]SHIFT+DOWN"
-export const SHIFT_LEFT = "[keyboard]SHIFT+LEFT"
-export const SHIFT_RIGHT = "[keyboard]SHIFT+RIGHT"
+export const KB_SHIFT_UP = [KB_SHIFT, KB_UP]
+export const KB_SHIFT_DOWN = [KB_SHIFT, KB_DOWN]
+export const KB_SHIFT_LEFT = [KB_SHIFT, KB_LEFT]
+export const KB_SHIFT_RIGHT = [KB_SHIFT, KB_RIGHT]
+
+// Generic events.
+export const KB_KEY_UP_EVENT = "KB_KEY_UP_EVENT"
+export const SHOW_KEYBOARD_SHORTCUTS = "[keyboard]SHOW_SHORTCUTS"
+
