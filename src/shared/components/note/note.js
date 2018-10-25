@@ -8,7 +8,7 @@ import type { Props } from "./note.flow"
 function Note(props: Props) {
   const classNames = classes({
     note: true,
-    [props.className || ""]: true,
+    [props.className]: Boolean(props.className),
     [`note--string__${props.note.string}`]: true,
   })
 

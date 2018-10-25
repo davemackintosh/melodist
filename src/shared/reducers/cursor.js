@@ -36,26 +36,26 @@ export default (state: Melodist$CursorState = defaultState, action: Actions$Curs
       ...state,
       note: action.note,
     }
-    case KB_UP:
-      return {
-        ...state,
-        selectedString: state.selectedString - 1,
-      }
-    case KB_DOWN:
-      return {
-        ...state,
-        selectedString: state.selectedString + 1,
-      }
-    case KB_LEFT:
-      return {
-        ...state,
-        selectedNote: state.selectedNote - 1,
-      }
-    case KB_RIGHT:
-      return {
-        ...state,
-        selectedNote: state.selectedNote + 1,
-      }
+  case KB_UP:
+    return {
+      ...state,
+      selectedString: state.selectedString - 1,
+    }
+  case KB_DOWN:
+    return {
+      ...state,
+      selectedString: state.selectedString + 1,
+    }
+  case KB_LEFT:
+    return {
+      ...state,
+      selectedNote: state.selectedNote - 1,
+    }
+  case KB_RIGHT:
+    return {
+      ...state,
+      selectedNote: state.selectedNote + 1,
+    }
   default:
     return { ...state }
   }

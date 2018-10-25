@@ -1,7 +1,7 @@
 {
-  "title": "Basic GP5 file",
+  "title": "test.mdst",
   "album": "Melodist Album",
-  "description": "",
+  "description": "A tablature editor built with web tech that's open source, hackable and packs version control as standard.",
   "trackNumber": 1,
   "artist": "Melodist Artist",
   "authors": [ "Dave Mackintosh" ],
@@ -16,7 +16,7 @@
       "instrument": {
         "type": "acoustic_guitar_steel"
       },
-      "tuning": "standard", 
+      "tuning": "standard",
       "measures": [
         {
           "repeat": 1,

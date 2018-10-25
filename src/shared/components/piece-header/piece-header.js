@@ -29,6 +29,9 @@ class PieceHeader extends Component<Props> {
         <p className="piece--header--authors">
           { this.renderAuthors(this.props.piece.authors) }
         </p>
+        <p className="piece--header--description">
+          { this.props.piece.description }
+        </p>
       </div>
     )
   }

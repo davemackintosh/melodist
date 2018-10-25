@@ -7,6 +7,7 @@ import type { TrackType } from "@flow/track.flow"
 import type { MeasureType } from "@flow/measure.flow"
 import type { NoteType } from "@flow/note.flow"
 
+import Cursor from "@components/cursor/cursor.redux"
 import PieceHeader from "@components/piece-header/piece-header"
 import Measure from "@components/measure/measure"
 
@@ -28,20 +29,32 @@ class Piece extends Component <Props, State> {
   }
 
   state = {
-    selectedTrack: this.props.piece.tracks[0],
-    selectedMeasure: this.props.piece.tracks[0].measures[0],
-    selectedBeat: this.props.piece.tracks[0].measures[0].beats[0],
+    selectedTrack: 0,
+    selectedMeasure: 0,
+    selectedBeat: 0,
+    selectedNote: 0,
   }
 
-  renderMeasures(measures: MeasureType[] = []) {
-    return measures.map((measure: MeasureType, index: number) => 
-      <Measure measure={ measure } key={ index } />
-    )
+  renderMeasures(selectedTrack: number = 0) {
+    const measures = this.props.piece.tracks[selectedTrack].measures
+    return measures.map((measure: MeasureType, index: number) => {
+      const cursor = this.state.selectedMeasure === index 
+        ? <Cursor { ...this.state } /> 
+        : null
+
+      return (
+        <Measure
+          key={ index }
+          cursor={ cursor }
+          measure={ measure }
+        />
+      )
+    })
   }
 
   render() {
     return (
-      <div className="piece">1
+      <div className="piece">
         <PieceHeader piece={ this.props.piece } />
         <div className="piece--measures">
           { this.renderMeasures(this.state.selectedTrack.measures) }
