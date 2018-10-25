@@ -1,4 +1,4 @@
-import Piece from "@components/piece/piece"
+import Piece from "@components/piece/piece.redux"
 
 const routes = [
   {

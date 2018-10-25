@@ -11,17 +11,10 @@ import Cursor from "@components/cursor/cursor.redux"
 import PieceHeader from "@components/piece-header/piece-header"
 import Measure from "@components/measure/measure"
 
+import type { Props, State } from "./piece.flow"
+
 import testMDST from "../../../../tests/material/test.mdst.json"
 
-type Props = {
-  piece: PieceType,
-}
-
-type State = {
-  selectedBeat: NoteType,
-  selectedMeasure: MeasureType,
-  selectedTrack: TrackType,
-}
 
 class Piece extends Component <Props, State> {
   static defaultProps = {
@@ -33,6 +26,26 @@ class Piece extends Component <Props, State> {
     selectedMeasure: 0,
     selectedBeat: 0,
     selectedNote: 0,
+  }
+
+  static getDerivedStateFromProps(props: Props, state: State) {
+    const out = { ...state }
+
+    console.log(props, state)
+    
+    if (state.selectedTrack !== props.cursor.selectedTrack)
+      out.selectedTrack = props.cursor.selectedTrack
+
+    if (state.selectedMeasure !== props.cursor.selectedMeasure)
+      out.selectedMeasure = props.cursor.selectedMeasure
+
+    if (state.selectedBeat !== props.cursor.selectedBeat)
+      out.selectedBeat = props.cursor.selectedBeat
+
+    if (state.selectedNote !== props.cursor.selectedNote)
+      out.selectedNote = props.cursor.selectedNote
+
+    return out
   }
 
   renderMeasures(selectedTrack: number = 0) {
