@@ -31,8 +31,6 @@ class Piece extends Component <Props, State> {
   static getDerivedStateFromProps(props: Props, state: State) {
     const out = { ...state }
 
-    console.log(props, state)
-    
     if (state.selectedTrack !== props.cursor.selectedTrack)
       out.selectedTrack = props.cursor.selectedTrack
 
