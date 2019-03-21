@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "ESNext",
+    "jsx": "react",
+    "sourceMap": true,
+    "outFile": "./dist/melodist.js",
+    "removeComments": true,
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "types": [
+      "node",
+      "jest",
+      "json-schema",
+    ],
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@m-types*": ["./types*"],
+      "@translations": ["./translations"],
+      "@src": ["./src"],
+      "@constants": ["./src/shared/constants"],
+      "@components": ["./src/shared/components"],
+      "@lib": ["./src/shared/lib"],
+      "@reducers": ["./src/shared/reducers"],
+      "@middleware": ["./src/shared/middleware"],
+      "@less": ["./src/shared/less"]
+    }
+  }
+}
