@@ -20,10 +20,25 @@ class Piece extends Component <Props, State> {
   }
 
   public static getDerivedStateFromProps(props: Props, state: State) {
+    // If nothing changed, do no update.
+    if (
+      state.selectedMeasure === props.cursor.selectedMeasure
+      && state.selectedTrack === props.cursor.selectedTrack
+      && state.selectedString === props.cursor.selectedString
+      && state.selectedBeat === props.cursor.selectedBeat
+      && state.selectedNote === props.cursor.selectedNote
+    ) {
+      return null
+    }
+
     const out = { ...state }
 
     if (state.selectedTrack !== props.cursor.selectedTrack) {
       out.selectedTrack = props.cursor.selectedTrack
+    }
+
+    if (state.selectedString !== props.cursor.selectedString) {
+      out.selectedString = props.cursor.selectedString
     }
 
     if (state.selectedMeasure !== props.cursor.selectedMeasure) {
@@ -46,13 +61,14 @@ class Piece extends Component <Props, State> {
     selectedMeasure: 0,
     selectedBeat: 0,
     selectedNote: 0,
+    selectedString: 0,
   }
 
   public renderMeasures(selectedTrack: number = 0) {
     const measures = this.props.piece.tracks[selectedTrack].measures
     return measures.map((measure: MeasureType, index: number) => {
       const cursor = this.state.selectedMeasure === index
-        ? <Cursor {...this.state} />
+        ? {...this.state}
         : null
 
       return (

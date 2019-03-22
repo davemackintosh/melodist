@@ -21,7 +21,7 @@ interface State {
 class Measure extends Component <Props, State> {
 
   public renderBeat(beat: BeatType, index: number) {
-    const cursor = this.props.cursor && this.props.cursor.props.selectedBeat === index
+    const cursor = this.props.cursor && this.props.cursor.selectedBeat === index
       ? this.props.cursor
       : null
 

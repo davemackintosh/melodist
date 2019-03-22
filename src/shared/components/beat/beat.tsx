@@ -4,11 +4,12 @@ import React from "react"
 import { NoteType } from "@m-types/note"
 import { Props } from "./beat"
 
+import { isCursorOnNote } from "@components/cursor/utils"
 import Note from "@components/note/note"
 
 function Beat(props: Props) {
   const noteElements = props.beat.notes.map((note: NoteType, index: number) => {
-    const cursor = props.cursor && props.cursor.props.selectedNote === index
+    const cursor = props.cursor && isCursorOnNote(props.cursor, note, index)
       ? props.cursor
       : null
 
@@ -51,6 +52,7 @@ Beat.defaultProps = {
     },
     notes: [{}],
     duration: 1,
+    cursor: {},
   },
 }
 

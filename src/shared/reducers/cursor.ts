@@ -17,9 +17,10 @@ import { Melodist$CursorState } from "@m-types/cursor"
 
 export const defaultState: Melodist$CursorState = {
   selectedNote: 0,
+  selextedBeat: 0,
   selectedTrack: 0,
   selectedString: 0,
-  selectedMeasure: 0, 
+  selectedMeasure: 0,
   ...(root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.cursor : {})}
 
 export default (state: Melodist$CursorState = defaultState, action: Actions$Cursor) => {
@@ -37,12 +38,12 @@ export default (state: Melodist$CursorState = defaultState, action: Actions$Curs
   case KB_UP:
     return {
       ...state,
-      selectedString: state.selectedString - 1,
+      selectedString: state.selectedString + 1,
     }
   case KB_DOWN:
     return {
       ...state,
-      selectedString: state.selectedString + 1,
+      selectedString: state.selectedString - 1,
     }
   case KB_LEFT:
     return {
