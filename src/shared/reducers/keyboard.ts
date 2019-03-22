@@ -1,10 +1,8 @@
-// @flow
-
 import { SHOW_KEYBOARD_SHORTCUTS } from "@constants/keyboard"
 import root from "window-or-global"
 
-import type { Melodist$CursorState } from "@flow/cursor.flow"
-import type { Actions$Cursor } from "@flow/actions/cursor.flow"
+import { Actions$Cursor } from "@m-types/actions/cursor"
+import { Melodist$CursorState } from "@m-types/cursor"
 
 export const defaultState: Melodist$CursorState = {
   showShortcuts: false, ...(root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.keyboard : {})}

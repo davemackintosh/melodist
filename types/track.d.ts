@@ -1,13 +1,11 @@
-// @flow
-
-import type { Instrument } from "@flow/instrument.flow"
-import type { Measure } from "@flow/measure.flow"
-import type { 
+import { Instrument } from "@m-types/instrument"
+import { Measure } from "@m-types/measure"
+import {
+  StandardTunings,
   TuningType,
-  StandardTunings, 
-} from "@flow/tuning.flow"
+} from "@m-types/tuning"
 
-export type TrackType = {
+export interface TrackType {
   title: string,
   instrument: Instrument,
   tuning: TuningType[] | StandardTunings,

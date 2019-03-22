@@ -1,5 +1,3 @@
-// @flow
-
 import {
   UPDATE_CURSOR_MEASURE,
   UPDATE_CURSOR_NOTE,
@@ -14,14 +12,15 @@ import {
   KB_UP,
 } from "@constants/keyboard"
 
-import type { Melodist$CursorState } from "@flow/cursor.flow"
-import type { Actions$Cursor } from "@flow/actions/cursor.flow"
+import { Actions$Cursor } from "@m-types/actions/cursor"
+import { Melodist$CursorState } from "@m-types/cursor"
 
 export const defaultState: Melodist$CursorState = {
   selectedNote: 0,
   selectedTrack: 0,
   selectedString: 0,
-  selectedMeasure: 0, ...(root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.cursor : {})}
+  selectedMeasure: 0, 
+  ...(root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.cursor : {})}
 
 export default (state: Melodist$CursorState = defaultState, action: Actions$Cursor) => {
   switch (action.type) {

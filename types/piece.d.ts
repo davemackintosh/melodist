@@ -1,7 +1,7 @@
-import { TimeSignatureType } from "./time-signature.flow"
-import { TrackType } from "./track.flow"
+import { TimeSignatureType } from "./time-signature"
+import { TrackType } from "./track"
 
-export interface PieceType = {
+export interface PieceType {
   title: string,
   album: string,
   description: string,
