@@ -1,6 +1,10 @@
-// @flow
-
-import type { Store, Dispatch } from "redux"
+import { Melodist$KeyboardAction } from "@m-types/actions/keyboard"
+import { Dispatch } from "react-redux"
+import {
+  Dispatch,
+  Store,
+} from "redux"
+import Keys from "ts-keycode-enum"
 
 import {
   KB_DOWN,
@@ -11,24 +15,24 @@ import {
 } from "@constants/keyboard"
 
 export default (store: Store) => {
-  return (next: Dispatch) => (inAction) => {
+  return (next: Dispatch) => (inAction: Melodist$KeyboardAction) => {
     const state = store.getState()
     switch (inAction.type) {
     case KB_KEY_UP_EVENT:
       switch (inAction.keyCode) {
-      case KB_UP:
+      case Keys.UpArrow:
         return next({
           type: KB_UP,
         })
-      case KB_DOWN:
+      case Keys.DownArrow:
         return next({
           type: KB_DOWN,
         })
-      case KB_LEFT:
+      case Keys.LeftArrow:
         return next({
           type: KB_LEFT,
         })
-      case KB_RIGHT:
+      case Keys.RightArrow:
         return next({
           type: KB_RIGHT,
         })

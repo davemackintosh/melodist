@@ -13,11 +13,11 @@ import {
 } from "@constants/keyboard"
 
 import { Actions$Cursor } from "@m-types/actions/cursor"
-import { Melodist$CursorState } from "@m-types/cursor"
+import { Melodist$CursorState } from "@m-types/app-state/cursor"
 
 export const defaultState: Melodist$CursorState = {
   selectedNote: 0,
-  selextedBeat: 0,
+  selectedBeat: 0,
   selectedTrack: 0,
   selectedString: 0,
   selectedMeasure: 0,

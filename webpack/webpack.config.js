@@ -1,6 +1,4 @@
-const {
-  NamedModulesPlugin,
-} = require("webpack")
+const { NamedModulesPlugin } = require("webpack")
 
 const { resolve } = require("path")
 const src = resolve(__dirname, "../", "src")
@@ -18,8 +16,6 @@ const alias = {
   "@middleware": resolve(src + "/shared/middleware"),
   "@less": resolve(src + "/shared/less"),
 }
-
-console.log(alias) // eslint-disable-line
 
 const webpackConfig = {
   context: src,
