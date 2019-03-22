@@ -3,11 +3,11 @@
 import type { Store, Dispatch } from "redux"
 
 import {
-  KB_KEY_UP_EVENT,
-  KB_UP,
   KB_DOWN,
+  KB_KEY_UP_EVENT,
   KB_LEFT,
   KB_RIGHT,
+  KB_UP,
 } from "@constants/keyboard"
 
 export default (store: Store) => {

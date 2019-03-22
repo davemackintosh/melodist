@@ -1,28 +1,27 @@
 // @flow
 
-import root from "window-or-global"
 import {
-  UPDATE_CURSOR_NOTE,
   UPDATE_CURSOR_MEASURE,
+  UPDATE_CURSOR_NOTE,
 } from "@constants/cursor"
+import root from "window-or-global"
 
 import {
-  KB_KEY_UP_EVENT,
-  KB_UP,
   KB_DOWN,
+  KB_KEY_UP_EVENT,
   KB_LEFT,
   KB_RIGHT,
+  KB_UP,
 } from "@constants/keyboard"
 
 import type { Melodist$CursorState } from "@flow/cursor.flow"
 import type { Actions$Cursor } from "@flow/actions/cursor.flow"
 
-export const defaultState: Melodist$CursorState = Object.assign({}, {
+export const defaultState: Melodist$CursorState = {
   selectedNote: 0,
   selectedTrack: 0,
   selectedString: 0,
-  selectedMeasure: 0,
-}, root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.cursor : {})
+  selectedMeasure: 0, ...(root.__INITIAL_STATE__ ? root.__INITIAL_STATE__.cursor : {})}
 
 export default (state: Melodist$CursorState = defaultState, action: Actions$Cursor) => {
   switch (action.type) {
