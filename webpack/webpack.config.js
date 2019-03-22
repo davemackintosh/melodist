@@ -24,7 +24,7 @@ console.log(alias) // eslint-disable-line
 const webpackConfig = {
   context: src,
   entry: [
-    resolve(src, "index.ts"),
+    resolve(src, "index.tsx"),
   ],
   output: {
     path: resolve(__dirname, "../electron/", "dist"),
