@@ -1,8 +1,8 @@
 // import { mixDown } from "./mix-down"
+import { css } from "@emotion/react"
 import ReactDOM from "react-dom"
+import { TrackEditor } from "./track-editor"
 
-const CELL_WIDTH = 50
-const CELL_HEIGHT = 25
 /*
 const context = new AudioContext()
 
@@ -66,16 +66,17 @@ window.addEventListener("DOMContentLoaded", async () => {
 })*/
 
 function Melodist(): JSX.Element {
-	const numColumns = Math.ceil(window.innerWidth / CELL_WIDTH)
-	const numRows = Math.ceil(window.innerHeight / CELL_HEIGHT)
+	const styles = css({
+		display: "flex",
+		borderRight: "1px solid #CFCFCF",
+		borderBottom: "1px solid #CFCFCF",
+	})
 
-	for (let r = 0; r <= numRows; r++) {
-		for (let c = 0; c <= numColumns; c++) {
-			console.log(c, r)
-		}
-	}
-
-	return <div>Hi</div>
+	return (
+		<div css={styles}>
+			<TrackEditor />
+		</div>
+	)
 }
 
 ReactDOM.render(<Melodist />, document.querySelector("body"))
