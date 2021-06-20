@@ -1,0 +1,39 @@
+{
+  "size": {
+    "font": {
+      "base"  : {
+        "value": 16,
+        "comment": "the base size of the font"
+      },
+      "small" : {
+        "value": 12,
+        "comment": "the small size of the font"
+      },
+      "regular": {
+        "value": "{size.font.base.value}",
+        "comment": "the regular/default size of the font"
+      },
+      "large" : {
+        "value": 24,
+        "comment": "the large size of the font"
+      },
+			"heading": {
+				"1": {
+					"value": 40
+				},
+				"2": {
+					"value": 32
+				},
+				"3": {
+					"value": 26
+				},
+				"4": {
+					"value": 20
+				},
+				"5": {
+					"value": "{size.font.base.value}"
+				}
+			}
+    }
+	}
+}

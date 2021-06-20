@@ -1,0 +1,15 @@
+{
+	"source": ["./src/style-dictionary/tokens/**/*.json"],
+	"platforms": {
+		"react": {
+			"transforms": ["attribute/cti",  "attribute/color", "name/cti/camel"],
+			"buildPath": "./src/",
+			"files": [
+				{
+					"destination": "theme.ts",
+					"format": "javascript/es6"
+				}
+			]
+		}
+	}
+}

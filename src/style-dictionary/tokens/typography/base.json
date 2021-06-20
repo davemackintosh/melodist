@@ -1,0 +1,58 @@
+{
+	"typography": {
+		"web": {
+			"primary": {
+				"value": "Oswald",
+				"category": "font-family"
+			},
+			"primaryBold": {
+				"value": "Oswald",
+				"category": "font-family"
+			},
+			"secondary": {
+				"value": "Ropa Sans",
+				"category": "font-family"
+			},
+			"additional": {
+				"value": "Assistant",
+				"category": "font-family"
+			},
+			"headers": {
+				"value": "{typography.web.primary.value}"
+			},
+			"numbers": {
+				"value": "{typography.web.primary.value}"
+			},
+			"buttons": {
+				"value": "{typography.web.additional.value}"
+			}
+		},
+		"mobile": {
+			"primary": {
+				"value": "Oswald_400Regular",
+				"category": "font-family"
+			},
+			"primaryBold": {
+				"value": "Oswald_700Bold",
+				"category": "font-family"
+			},
+			"secondary": {
+				"value": "RopaSans_400Regular",
+				"category": "font-family"
+			},
+			"additional": {
+				"value": "Assistant_700Bold",
+				"category": "font-family"
+			},
+			"headers": {
+				"value": "{typography.mobile.primary.value}"
+			},
+			"numbers": {
+				"value": "{typography.mobile.primary.value}"
+			},
+			"buttons": {
+				"value": "{typography.web.additional.value}"
+			}
+		}
+	}
+}

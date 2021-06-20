@@ -1,0 +1,30 @@
+{
+	"size": {
+		"rhythm": {
+			"vertical": {
+				"value": 16
+			},
+			"horizontal": {
+				"value": 16
+			}
+		},
+
+		"border": {
+			"radius": {
+				"value": 4
+			}
+		},
+
+		"breakpoints": {
+			"small": {
+				"value": 480
+			},
+			"medium": {
+				"value": 768
+			},
+			"large": {
+				"value": 1200
+			}
+		}
+	}
+}

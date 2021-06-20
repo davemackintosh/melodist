@@ -1,23 +1,34 @@
 {
-  "devDependencies": {
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.7",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
-    "@yarnpkg/pnpify": "^3.0.0-rc.6",
-    "eslint": "^7.28.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "prettier": "^2.3.1",
-    "typescript": "^4.3.2"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "ts-loader": "^9.2.3",
-    "webpack": "^5.39.1",
-    "webpack-cli": "^4.7.2"
-  }
+ "scripts": {
+  "build": "yarn style-dictionary build && yarn eslint --fix ./src/theme.ts",
+  "start": "yarn concurrently -n design,server 'yarn build' 'yarn http-server .'"
+ },
+ "devDependencies": {
+  "@types/concurrently": "^6",
+  "@types/http-server": "^0",
+  "@types/react": "^17.0.11",
+  "@types/react-dom": "^17.0.7",
+  "@typescript-eslint/eslint-plugin": "^4.27.0",
+  "@typescript-eslint/parser": "^4.27.0",
+  "@yarnpkg/pnpify": "^3.0.0-rc.6",
+  "concurrently": "^6.2.0",
+  "eslint": "^7.28.0",
+  "eslint-config-prettier": "^8.3.0",
+  "eslint-plugin-prettier": "^3.4.0",
+  "eslint-plugin-react": "^7.24.0",
+  "http-server": "^0.12.3",
+  "prettier": "^2.3.1",
+  "style-dictionary": "^3.0.1",
+  "typescript": "^4.3.2"
+ },
+ "dependencies": {
+  "@emotion/react": "^11.4.0",
+  "@expo-google-fonts/source-sans-pro": "^0.1.0",
+  "@expo-google-fonts/staatliches": "^0.1.0",
+  "react": "^17.0.2",
+  "react-dom": "^17.0.2",
+  "ts-loader": "^9.2.3",
+  "webpack": "^5.39.1",
+  "webpack-cli": "^4.7.2"
+ }
 }

@@ -1,7 +1,7 @@
 // import { mixDown } from "./mix-down"
 import { css } from "@emotion/react"
 import ReactDOM from "react-dom"
-import { TrackEditor } from "./track-editor"
+import { TrackEditor } from "./components/track-editor"
 
 /*
 const context = new AudioContext()

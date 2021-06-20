@@ -1,0 +1,17 @@
+{
+  "color": {
+    "font": {
+      "base": { "value": "#222834" },
+      "header": { "value": "#0B2E4B" },
+			"primary": {"value": "#1c1c1c"},
+			"button": {
+				"light": {
+"value": "#FFFFFF"
+				},
+				"dark": {
+					"value": "color.font.base"
+				}
+			}
+    }
+  }
+}
